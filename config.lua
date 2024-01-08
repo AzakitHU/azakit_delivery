@@ -9,10 +9,14 @@ blipsprite = 501
 ---SELL 1---
 ------------
 SELLITEM = "weed"  -- sales item to sell
+SELLITEM_AMOUNT = 50  -- amount of sellitem required start / no sellitem check SELLITEM_AMOUNT = 0 
 TICKETITEM_REQ = true -- if true, you need an extra ticket item
 TICKETITEM = "sellticket" -- ticket item
 TICKETITEM_AMOUNT = 1 -- the number of tickets remove
-SELLITEM_AMOUNT = 50  -- amount of sellitem required start / no sellitem check SELLITEM_AMOUNT = 0 
+REQITEM_REQ = false --plus required item
+REQITEM = "infoticket" --plus required item
+REQITEM_AMOUNT = 0 -- plus required item amount
+REQITEM_REMOVE = false -- plus required item remove on check
 
 START_NPC = {
     ped = {
@@ -49,10 +53,14 @@ Delilocations = {
 ---SELL 2---
 ------------
 SELLITEM2 = "coke"  -- sales item to sell
+SELLITEM2_AMOUNT = 20  -- amount of sellitem required start / no sellitem check SELLITEM_AMOUNT = 0 
 TICKETITEM2_REQ = true -- if true, you need an extra ticket item
 TICKETITEM2 = "sellticket" -- ticket item
 TICKETITEM2_AMOUNT = 1 -- the number of tickets remove
-SELLITEM2_AMOUNT = 20  -- amount of sellitem required start / no sellitem check SELLITEM_AMOUNT = 0 
+REQITEM2_REQ = true --plus required item
+REQITEM2 = "infoticket" --plus required item
+REQITEM2_AMOUNT = 1 -- plus required item amount
+REQITEM2_REMOVE = true -- plus required item remove on check
 
 START_NPC2 = {
     ped = {
@@ -89,10 +97,14 @@ Delilocations2 = {
 ---SELL 3---
 ------------
 SELLITEM3 = "medikit"  -- sales item to sell
+SELLITEM3_AMOUNT = 0  -- amount of sellitem required start / no sellitem check SELLITEM_AMOUNT = 0 
 TICKETITEM3_REQ = false -- if true, you need an extra ticket item
 TICKETITEM3 = "sellticket" -- ticket item
 TICKETITEM3_AMOUNT = 0 -- the number of tickets remove
-SELLITEM3_AMOUNT = 0  -- amount of sellitem required start / no sellitem check SELLITEM_AMOUNT = 0 
+REQITEM3_REQ = false --plus required item
+REQITEM3 = "infoticket" --plus required item
+REQITEM3_AMOUNT = 0 -- plus required item amount
+REQITEM3_REMOVE = false -- plus required item remove on check
 
 START_NPC3 = {
     ped = {
