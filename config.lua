@@ -6,6 +6,7 @@ blipscale = 1.0
 blipcolour = 2
 blipsprite = 501
 
+
 ---SELL 1---
 ------------
 SELLITEM = "weed"  -- sales item to sell
@@ -17,6 +18,8 @@ REQITEM_REQ = false --plus required item
 REQITEM = "infoticket" --plus required item
 REQITEM_AMOUNT = 0 -- plus required item amount
 REQITEM_REMOVE = false -- plus required item remove on check
+POLICE_REQ = 1  -- Minimum police required to start
+POLICE_JOB = "police"  -- Police Job
 
 START_NPC = {
     ped = {
@@ -61,6 +64,8 @@ REQITEM2_REQ = true --plus required item
 REQITEM2 = "infoticket" --plus required item
 REQITEM2_AMOUNT = 1 -- plus required item amount
 REQITEM2_REMOVE = true -- plus required item remove on check
+POLICE_REQ2 = 1  -- Minimum police required to start
+POLICE_JOB2 = "police"  -- Police Job
 
 START_NPC2 = {
     ped = {
@@ -105,6 +110,8 @@ REQITEM3_REQ = false --plus required item
 REQITEM3 = "infoticket" --plus required item
 REQITEM3_AMOUNT = 0 -- plus required item amount
 REQITEM3_REMOVE = false -- plus required item remove on check
+POLICE_REQ3 = 1  -- Minimum police required to start
+POLICE_JOB3 = "police"  -- Police Job
 
 START_NPC3 = {
     ped = {
