@@ -110,7 +110,7 @@ REQITEM3_REQ = false --plus required item
 REQITEM3 = "infoticket" --plus required item
 REQITEM3_AMOUNT = 0 -- plus required item amount
 REQITEM3_REMOVE = false -- plus required item remove on check
-POLICE_REQ3 = 1  -- Minimum police required to start
+POLICE_REQ3 = 0  -- Minimum police required to start
 POLICE_JOB3 = "police"  -- Police Job
 
 START_NPC3 = {
