@@ -9,6 +9,7 @@ Locales["en"] = {
     Transportdraw = "[~g~E~w~] Knock",
     Sell = "Transfer in progress...",
     deliblipname = "Delivery Point",
+    nopolice = "Not enough Police!",
     ---SELL 2---
     ------------
     start_npc2 = "Sell Coke",
