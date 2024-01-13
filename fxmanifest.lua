@@ -2,6 +2,8 @@ fx_version "adamant"
 game "gta5"
 lua54 'yes'
 
+name         'azakit_delivery'
+version      '1.3.0'
 author 'Azakit'
 description 'Sell item with delivery'
 
