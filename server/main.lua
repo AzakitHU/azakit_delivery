@@ -1,3 +1,59 @@
+Start = false
+
+RegisterServerCallback('azakit_delivery:Start', function(source, cb)
+    if Start then
+        cb({
+            time = false,
+            cops = PoliceCount() >= POLICE_REQ
+        })
+        return
+    end
+    
+    cb({
+        time = true,
+        cops = PoliceCount() >= POLICE_REQ
+    })
+
+    Start = false
+    
+end)
+
+RegisterServerCallback('azakit_delivery:Start2', function(source, cb)
+    if Start then
+        cb({
+            time = false,
+            cops = PoliceCount() >= POLICE_REQ2
+        })
+        return
+    end
+    
+    cb({
+        time = true,
+        cops = PoliceCount() >= POLICE_REQ2
+    })
+
+    Start = false
+    
+end)
+
+RegisterServerCallback('azakit_delivery:Start3', function(source, cb)
+    if Start then
+        cb({
+            time = false,
+            cops = PoliceCount() >= POLICE_REQ3
+        })
+        return
+    end
+    
+    cb({
+        time = true,
+        cops = PoliceCount() >= POLICE_REQ3
+    })
+
+    Start = false
+    
+end)
+
 RegisterServerCallback('azakit_delivery:itemTaken',function(source, cb)
     local xPlayer = ESX.GetPlayerFromId(source)
     local item = xPlayer.getInventoryItem(SELLITEM) 
