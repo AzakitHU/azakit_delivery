@@ -54,7 +54,9 @@ RegisterServerCallback('azakit_delivery:Start3', function(source, cb)
     
 end)
 
+
 RegisterServerCallback('azakit_delivery:itemTaken',function(source, cb)
+    local src = source
     local xPlayer = ESX.GetPlayerFromId(source)
     local item = xPlayer.getInventoryItem(SELLITEM) 
     local itemtick = xPlayer.getInventoryItem(TICKETITEM) 
@@ -62,6 +64,8 @@ RegisterServerCallback('azakit_delivery:itemTaken',function(source, cb)
     if not REQITEM_REQ and TICKETITEM_REQ then 
         if item.count >= SELLITEM_AMOUNT and itemtick.count >= TICKETITEM_AMOUNT then
             xPlayer.removeInventoryItem(TICKETITEM, TICKETITEM_AMOUNT)
+            local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 1."
+            discordLog(message, Webhook)
         cb(true)
          else
         cb(false)
@@ -69,12 +73,16 @@ RegisterServerCallback('azakit_delivery:itemTaken',function(source, cb)
     elseif not TICKETITEM_REQ and REQITEM_REQ and REQITEM_REMOVE then 
                 if item.count >= SELLITEM_AMOUNT and itemreq.count >= REQITEM_AMOUNT then
                     xPlayer.removeInventoryItem(REQITEM, REQITEM_AMOUNT)
+                    local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 1."
+                    discordLog(message, Webhook)
                 cb(true)
                  else
                 cb(false)
                  end   
     elseif not TICKETITEM_REQ and REQITEM_REQ and not REQITEM_REMOVE then 
                 if item.count >= SELLITEM_AMOUNT and itemreq.count >= REQITEM_AMOUNT then
+                    local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 1."
+                    discordLog(message, Webhook)
                 cb(true)
                  else
                 cb(false)
@@ -83,6 +91,8 @@ RegisterServerCallback('azakit_delivery:itemTaken',function(source, cb)
             if item.count >= SELLITEM_AMOUNT and itemtick.count >= TICKETITEM_AMOUNT and item.count >= SELLITEM_AMOUNT and itemreq.count >= REQITEM_AMOUNT then
                 xPlayer.removeInventoryItem(TICKETITEM, TICKETITEM_AMOUNT)
                 xPlayer.removeInventoryItem(REQITEM, REQITEM_AMOUNT)
+                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 1."
+                discordLog(message, Webhook)
             cb(true)
              else
             cb(false)
@@ -90,12 +100,16 @@ RegisterServerCallback('azakit_delivery:itemTaken',function(source, cb)
     elseif TICKETITEM_REQ and REQITEM_REQ and not REQITEM_REMOVE then 
                      if item.count >= SELLITEM_AMOUNT and itemtick.count >= TICKETITEM_AMOUNT and item.count >= SELLITEM_AMOUNT and itemreq.count >= REQITEM_AMOUNT then
                          xPlayer.removeInventoryItem(TICKETITEM, TICKETITEM_AMOUNT)
+                         local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 1."
+                         discordLog(message, Webhook)
                      cb(true)
                       else
                      cb(false)
                       end              
     else
         if item.count >= SELLITEM_AMOUNT then
+            local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 1."
+            discordLog(message, Webhook)
         cb(true)
          else
         cb(false)
@@ -104,6 +118,7 @@ RegisterServerCallback('azakit_delivery:itemTaken',function(source, cb)
 end)
 
 RegisterServerCallback('azakit_delivery:itemTaken2',function(source, cb)
+    local src = source
     local xPlayer = ESX.GetPlayerFromId(source)
     local item = xPlayer.getInventoryItem(SELLITEM2) 
     local itemtick = xPlayer.getInventoryItem(TICKETITEM2) 
@@ -111,6 +126,8 @@ RegisterServerCallback('azakit_delivery:itemTaken2',function(source, cb)
     if not REQITEM2_REQ and TICKETITEM2_REQ then 
         if item.count >= SELLITEM2_AMOUNT and itemtick.count >= TICKETITEM2_AMOUNT then
             xPlayer.removeInventoryItem(TICKETITEM2, TICKETITEM2_AMOUNT)
+            local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 2."
+            discordLog(message, Webhook)
         cb(true)
          else
         cb(false)
@@ -118,12 +135,16 @@ RegisterServerCallback('azakit_delivery:itemTaken2',function(source, cb)
     elseif not TICKETITEM2_REQ and REQITEM2_REQ and REQITEM2_REMOVE then 
                 if item.count >= SELLITEM2_AMOUNT and itemreq.count >= REQITEM2_AMOUNT then
                     xPlayer.removeInventoryItem(REQITEM2, REQITEM2_AMOUNT)
+                    local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 2."
+                    discordLog(message, Webhook)
                 cb(true)
                  else
                 cb(false)
                  end   
     elseif not TICKETITEM2_REQ and REQITEM2_REQ and not REQITEM2_REMOVE then 
                 if item.count >= SELLITEM2_AMOUNT and itemreq.count >= REQITEM2_AMOUNT then
+                    local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 2."
+                    discordLog(message, Webhook)
                 cb(true)
                  else
                 cb(false)
@@ -132,6 +153,8 @@ RegisterServerCallback('azakit_delivery:itemTaken2',function(source, cb)
             if item.count >= SELLITEM2_AMOUNT and itemtick.count >= TICKETITEM2_AMOUNT and item.count >= SELLITEM2_AMOUNT and itemreq.count >= REQITEM2_AMOUNT then
                 xPlayer.removeInventoryItem(TICKETITEM2, TICKETITEM2_AMOUNT)
                 xPlayer.removeInventoryItem(REQITEM2, REQITEM2_AMOUNT)
+                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 2."
+                discordLog(message, Webhook)
             cb(true)
              else
             cb(false)
@@ -139,12 +162,16 @@ RegisterServerCallback('azakit_delivery:itemTaken2',function(source, cb)
     elseif TICKETITEM2_REQ and REQITEM2_REQ and not REQITEM2_REMOVE then 
                      if item.count >= SELLITEM2_AMOUNT and itemtick.count >= TICKETITEM2_AMOUNT and item.count >= SELLITEM2_AMOUNT and itemreq.count >= REQITEM2_AMOUNT then
                          xPlayer.removeInventoryItem(TICKETITEM2, TICKETITEM2_AMOUNT)
+                         local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 2."
+                         discordLog(message, Webhook)
                      cb(true)
                       else
                      cb(false)
                       end    
     else
         if item.count >= SELLITEM2_AMOUNT then
+            local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 2."
+            discordLog(message, Webhook)
         cb(true)
          else
         cb(false)
@@ -153,6 +180,7 @@ RegisterServerCallback('azakit_delivery:itemTaken2',function(source, cb)
 end)
 
 RegisterServerCallback('azakit_delivery:itemTaken3',function(source, cb)
+    local src = source
     local xPlayer = ESX.GetPlayerFromId(source)
     local item = xPlayer.getInventoryItem(SELLITEM3) 
     local itemtick = xPlayer.getInventoryItem(TICKETITEM3)
@@ -168,12 +196,16 @@ RegisterServerCallback('azakit_delivery:itemTaken3',function(source, cb)
                 if item.count >= SELLITEM3_AMOUNT and itemreq.count >= REQITEM3_AMOUNT then
                     xPlayer.removeInventoryItem(REQITEM3, REQITEM_AMOUNT3)
                 cb(true)
+                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 3."
+                discordLog(message, Webhook)
                  else
                 cb(false)
                  end   
     elseif not TICKETITEM3_REQ and REQITEM3_REQ and not REQITEM3_REMOVE then 
                 if item.count >= SELLITEM3_AMOUNT and itemreq.count >= REQITEM3_AMOUNT then
                 cb(true)
+                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 3."
+                discordLog(message, Webhook)
                  else
                 cb(false)
                  end       
@@ -182,6 +214,8 @@ RegisterServerCallback('azakit_delivery:itemTaken3',function(source, cb)
                 xPlayer.removeInventoryItem(TICKETITEM3, TICKETITEM3_AMOUNT)
                 xPlayer.removeInventoryItem(REQITEM3, REQITEM3_AMOUNT)
             cb(true)
+            local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 3."
+            discordLog(message, Webhook)
              else
             cb(false)
              end     
@@ -189,18 +223,21 @@ RegisterServerCallback('azakit_delivery:itemTaken3',function(source, cb)
                      if item.count >= SELLITEM3_AMOUNT and itemtick.count >= TICKETITEM3_AMOUNT and item.count >= SELLITEM3_AMOUNT and itemreq.count >= REQITEM3_AMOUNT then
                          xPlayer.removeInventoryItem(TICKETITEM3, TICKETITEM3_AMOUNT)
                      cb(true)
+                     local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 3."
+                     discordLog(message, Webhook)
                       else
                      cb(false)
                       end    
     else
         if item.count >= SELLITEM3_AMOUNT then
         cb(true)
+        local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Started Delivery 3."
+        discordLog(message, Webhook)
          else
         cb(false)
          end   
     end     
 end)
-
 
 RegisterServerEvent('azakit_delivery:deli')
 AddEventHandler('azakit_delivery:deli', function()
