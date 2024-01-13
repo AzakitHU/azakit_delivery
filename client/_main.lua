@@ -8,7 +8,7 @@ Citizen.CreateThread(function()
     TaskStartScenarioInPlace(StartNPC, "WORLD_HUMAN_SMOKING", 0, true)    
     AddEntityMenuItem({
         entity = StartNPC,
-        event = "azakit_delivery:Check",
+        event = "azakit_delivery:StartDelivery",
         desc = _("start_npc")
     })
 
@@ -20,7 +20,7 @@ Citizen.CreateThread(function()
     TaskStartScenarioInPlace(StartNPC2, "WORLD_HUMAN_SMOKING", 0, true)    
     AddEntityMenuItem({
         entity = StartNPC2,
-        event = "azakit_delivery:Check2",
+        event = "azakit_delivery:StartDelivery2",
         desc = _("start_npc2")
     })   
     
@@ -32,11 +32,64 @@ Citizen.CreateThread(function()
     TaskStartScenarioInPlace(StartNPC3, "WORLD_HUMAN_STAND_MOBILE", 0, true)    
     AddEntityMenuItem({
         entity = StartNPC3,
-        event = "azakit_delivery:Check3",
+        event = "azakit_delivery:StartDelivery3",
         desc = _("start_npc3")
     })
 end)
 
+
+function StartDelivery()
+    TriggerServerCallback('azakit_delivery:Start', function(data)
+        
+        if not data.cops then    
+            lib.notify({
+                position = 'top',
+                title = _("nopolice"),
+                type = 'error'
+              })
+            return
+        end
+		TriggerEvent('azakit_delivery:Check')
+    
+    end)
+end
+RegisterNetEvent("azakit_delivery:StartDelivery", StartDelivery)
+
+
+function StartDelivery2()
+    TriggerServerCallback('azakit_delivery:Start2', function(data)
+        
+        if not data.cops then    
+            lib.notify({
+                position = 'top',
+                title = _("nopolice"),
+                type = 'error'
+              })
+            return
+        end
+		TriggerEvent('azakit_delivery:Check2')
+    
+    end)
+end
+RegisterNetEvent("azakit_delivery:StartDelivery2", StartDelivery2)
+
+
+function StartDelivery3()
+    TriggerServerCallback('azakit_delivery:Start3', function(data)
+        
+        if not data.cops then    
+            lib.notify({
+                position = 'top',
+                title = _("nopolice"),
+                type = 'error'
+              })
+            return
+        end
+		TriggerEvent('azakit_delivery:Check3')
+    
+    end)
+end
+RegisterNetEvent("azakit_delivery:StartDelivery3", StartDelivery3)
 
 RegisterNetEvent('azakit_delivery:Check', function()
    
