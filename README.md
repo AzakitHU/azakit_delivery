@@ -5,6 +5,7 @@ Everything can be easily changed in the config.lua file.
 
 * Easy configuration
 * Checking items
+* Police check
 * 10 preset addresses
 * Discord Webhook
 
@@ -45,6 +46,10 @@ https://www.youtube.com/watch?v=F562Z0a0KX8
 # UPDATE
 - Added additional required item check.
 (Thus, up to three elements can be checked before issuing the address.)
+- Everything is easily configured in config.lua
+
+# UPDATE
+- Added Police check.
 - Everything is easily configured in config.lua
 
 # Documentation
