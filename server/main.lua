@@ -252,7 +252,7 @@ AddEventHandler('azakit_delivery:deli', function()
                 local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Sold " ..amount.. " " .. SELLITEM .. " and earned " ..reward.. " " .. rewarditem.. "."
                 discordLog(message, Webhook)
             else
-                TriggerClientEvent('ox_lib:notify', source, { type = 'error', title = _("noitem2"), position = 'top' })
+                TriggerClientEvent('ox_lib:notify', source, { type = 'error', title = _("noitem2_1"), position = 'top' })
             end          
         end)
 
