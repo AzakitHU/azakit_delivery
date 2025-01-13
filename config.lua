@@ -1,6 +1,6 @@
 LANGUAGE = 'en'
 
-Webhook = "https://discord.com/api/webhooks/1193944718019670168/Dp8XKt9UPm61XYBBMkjgIj3x3v5xA4cNq55sAFIYY3ojWa5lh-gnTckMi8sBTYdPVKah"
+Webhook = ""
 
 blipscale = 1.0
 blipcolour = 2
